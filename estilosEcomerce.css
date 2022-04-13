@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.Imagenportada-home{
+    float: right;
+    background-color: #ff4f6f;
+   
+    
+ }
+nav{
+    text-align: center;
+    padding: auto;
+    margin: 10px; 
+}
+nav > a{
+    color: black;
+    
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 20px; 
+    
+    
+}
+
+nav > a:hover{
+    text-decoration: underline;
+}
+h1 {
+    color: #ff4f6f;
+    padding: 12px;
+     
+}
+
+.Container-home{
+    width: 50%;
+    float: left;
+    display: block;
+    text-align: center;
+    font-size: 40px;
+
+    
+}
+.Botones-home{
+    display: flex;
+    justify-content: center;
+}
+.Discover-home{
+    background-color:gray;
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    margin-right: 0;
+}
+.Add-home{
+    margin: 10px;
+    margin-left: 0;
+    background-color: black;
+    color: azure;
+    width: 200px;
+}
+.Filtros-products{
+    margin-top: 700px;
+    display: flex;
+    
+    font-size: 30px;
+    background-color: beige;
+    margin-bottom: 250px;
+    justify-content: space-evenly;
+    
+}
+.Contenido-products{
+
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px;
+    flex-wrap: wrap; 
+    text-align: center;
+}
+.Contenido-products div{
+    background-color: aquamarine;
+}
+.Contenido-products img{
+    background-color: aliceblue;
+}
+footer{
+    margin-top: 250px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: gray;  
+    
+}
+
