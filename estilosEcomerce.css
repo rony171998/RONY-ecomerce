@@ -1,21 +1,40 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
+
 .Imagenportada-home{
     float: right;
     background-color: #ff4f6f;
-   
     
+    margin-right: 410px;
+    padding-top: 170px;
+    margin-top: 0;
+    
+    width: 480px;
+    height: 680px;
  }
+ 
 nav{
-    text-align: center;
-    padding: auto;
-    margin: 10px; 
+    text-align: left;
+    padding: 10px 50px 10px 0;
+    
+    display: block;
+    position: fixed;
+    
+    right: 50;
+    width: 100vmax;
+    height: 8vh; 
+    font-size: 1vmax;
+    padding-left: 450px;  
+    
+    
 }
 nav > a{
     color: black;
-    
+    align-items: center;
     font-weight: 300;
     text-decoration: none;
     margin-right: 10px;
@@ -25,34 +44,63 @@ nav > a{
     
 }
 
+
 nav > a:hover{
     text-decoration: underline;
 }
+
+.icono2{
+    margin-left: 550px;
+    width: 25px;
+}
+.icono2:active {
+    background-color: black;
+}
+.icono3{
+    width: 32px;
+    margin-left: 15px;
+}
+.icono1{
+    width: 32px;
+}
 h1 {
-    color: #ff4f6f;
-    padding: 12px;
-     
+    color: black;
+     padding-bottom: 15px;
 }
 
 .Container-home{
-    width: 50%;
-    float: left;
+    width: 30%;
+    margin-left: 450px;
+    margin-top: 0px;
     display: block;
-    text-align: center;
-    font-size: 40px;
+    text-align: left;
+    font-size: 20px;
+    
+    padding: 10px;
+    padding-top: 210px;
 
     
 }
+.Container-home h3{
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 50px;
+}
+.Container-home h2{
+    color: #ff4f6f;
+    margin-bottom: 30px;
+}
 .Botones-home{
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 .Discover-home{
-    background-color:gray;
+    background-color:rgba(216, 217, 218, 0.979);
     width: 150px;
-    height: 100px;
+    height: 50px;
     margin: 20px;
     margin-right: 0;
+    margin-left: 0;
 }
 .Add-home{
     margin: 10px;
@@ -60,37 +108,112 @@ h1 {
     background-color: black;
     color: azure;
     width: 200px;
+    height: 70px;
+}
+.Products{
+    margin-left: 450px;
+    margin-right: 410px;
+
 }
 .Filtros-products{
-    margin-top: 700px;
+    margin-top: 350px;
     display: flex;
     
-    font-size: 30px;
-    background-color: beige;
-    margin-bottom: 250px;
+    font-size: 15px;
+    margin-bottom: 150px;
     justify-content: space-evenly;
     
+    
+    
+}
+.Filtros-products div{
+    border-inline-end-style: solid;
 }
 .Contenido-products{
 
     display:flex;
-    justify-content: space-evenly;
     align-items: center;
-    margin: 40px;
-    flex-wrap: wrap; 
-    text-align: center;
+    flex-wrap: nowrap; 
+    
+   
 }
 .Contenido-products div{
-    background-color: aquamarine;
+    
+    width: 100%;
+    background-color: aliceblue;
+    margin-right: 80px;
+    border-radius: 5%;   
 }
 .Contenido-products img{
-    background-color: aliceblue;
+    width: 100%;
+    background-color: #e5e5e5;
+    padding-bottom: 40px;  
+    border-top-left-radius: 5%; 
+    border-top-right-radius: 5%; 
+}
+.Contenido-products .Precio{
+    padding-left: 20px;
+    margin-right: 10px;
+    float: left;
+    padding-bottom: 30px;
+    
+}
+.Nombre-product{
+    text-align: left;
+}
+.Contenido-products h5{
+    margin-top: 5px;
+    color: gray;
+    
+    
+}
+.Contenido-products button{
+    border-radius: 50%;
+    
+    background-color: #ffff;
+    padding:20px;
+    
+
 }
 footer{
     margin-top: 250px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     text-align: center;
-    background-color: gray;  
+    background-color: #e5e5e5;  
     
+}
+.Pie-pagina{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 100px;
+    font-size: 15px;
+    border-bottom-style: solid;
+    color: #ffff;
+    width: 75%;
+    
+}
+.Pie-pagina div{
+    color: black;
+    margin-left: 100px;
+    text-align: left;
+}
+.Pie-pagina div h3{
+    margin: 20px;
+    margin-left: 0;
+    text-align: left;
+    color: grey;
+    font-style: normal;
+}
+.Pie-pagina img{
+    
+    width: 8%;
+    margin-left: 8px;
+    margin-top: 12px;
+    flex-direction: row;
+}
+.Derechos-reservados{
+    text-decoration-color: #e5e5e5;
+    margin-top: 20px;
 }
 
