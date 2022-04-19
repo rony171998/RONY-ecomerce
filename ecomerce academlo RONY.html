@@ -17,8 +17,16 @@
             <a href="#">STORE</a>
             <a href="#">Home</a>
             <a href="#">products</a>
-            <img class="icono2" src="img/moon-half-visible-face-on-light-and-half-on-darkness.png" alt="">
+            <img class="icono2" id="botomdark" src="img/moon-half-visible-face-on-light-and-half-on-darkness.png" alt="">
+            
             <img class="icono3" src="img/shopping-bag.png" alt="">
+            <div class="compras">
+                <h1>Compras</h1>
+                <img class="carrito-compra" src="img/empty-cart.png" alt="">
+                <h3>Your cart is empty
+                    You can add items to your cart by clicking on the "+" button on the product page.</h3>
+            </div>
+            
         </nav>
 
         <div class="Imagenportada-home">
@@ -128,6 +136,28 @@
             <h4>rony puche web &copy; 2022</h4>
         </div>
     </footer>
+    <script>
+        const botomdark=document.querySelector('#botomdark')
+        const body=document.querySelector('body')
+
+        load();
+        botomdark=addEventListener("click", e =>{
+            body.classList.toggle('darkmode');
+            store(body.classList.contains('darkmode'));
+        });
+        function load() {
+            const darkmode=localStorage.getItem('darkmode');
+            if (!darkmode) {
+                store('false');
+
+            }else if (darkmode =='true') {
+                body.classList.add('darkmode');
+            }
+        }
+        function store(value) {
+            localStorage.setItem('darkmode',value);
+        }
+    </script>
     
 </body>
 
