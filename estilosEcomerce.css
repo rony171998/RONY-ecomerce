@@ -248,4 +248,43 @@ body.darkmode{
     color: #ddd;
 }
 
+@media screen and (max-width: 500px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .nav{
+        display: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .Container-home{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: aqua;
+    }
+    .Products{
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: aqua;
+    }
+    .Contenido-products{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;  
+        width: 100%;
+        background-color: #ff4f6f;
+    }
+    .Pie-pagina{
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+}
 
