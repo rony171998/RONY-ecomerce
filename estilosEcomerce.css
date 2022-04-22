@@ -20,7 +20,6 @@
 nav{
     text-align: left;
     padding: 10px 50px 10px 0;
-    
     display: block;
     position: fixed;
     
@@ -44,53 +43,69 @@ nav > a{
     
 }
 
-
 nav > a:hover{
     text-decoration: underline;
 }
+.btn-dark{
+    margin-left: 80%;
+    
+}
 
 .icono2{
-    margin-left: 550px;
-    width: 25px;
-}
-.icono2:active {
-    background-color: black;
-}
-.icono3{
-    width: 32px;
-    margin-left: 15px;
-}
-.compras{
-    visibility: hidden;
-    margin-top: 100px;
-    display: block;
-    float: right;
-    width: 25%;
-    text-align: center;
+    width: 30px;
 }
 
-.carrito-compra{
-    display: block;
-    visibility: hidden;
-    text-align: center;
-    width: 100%;
+.icono3{
+    width: 32px;
 }
-.icono3:hover{
-    
+.compras{
     display: block;
-        position: fixed;
-        top: 20px;
-        right: 80px;
-        padding: 10px;
-        width: 10vmax;
+    position: fixed;
+    margin-top: 100px;
+    width: 20%;
+    height: 100vh;
+    text-align: center;
+    right: 10px;
+}
+.empty{
+    display: none;
+}
+.carrito-compraimg{
+    display: block;
+    
+}
+.producto-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.productos{
+   display: flex;
+   justify-content: center;
+   
+}
+.productos-text{
+    display: flex;
+ }
+ .productos-botones{
+    display: flex;
+      
+ }
+ 
+.producto-carrito img{
+    width: 20%;
+}
+
+#precio-total{
+    display: flex;
+    justify-content: space-evenly;
 
 }
 .icono1{
     width: 32px;
 }
 h1 {
-    
-     padding-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .Container-home{
@@ -100,7 +115,6 @@ h1 {
     display: block;
     text-align: left;
     font-size: 20px;
-    
     padding: 10px;
     padding-top: 210px;
 
@@ -165,13 +179,12 @@ h1 {
 .Contenido-products div{
     
     width: 100%;
-    background-color: aliceblue;
     margin-right: 80px;
     border-radius: 5%;   
+    border-style: solid;
 }
 .Contenido-products img{
     width: 100%;
-    background-color: #e5e5e5;
     padding-bottom: 40px;  
     border-top-left-radius: 5%; 
     border-top-right-radius: 5%; 
@@ -184,27 +197,22 @@ h1 {
     
 }
 .Nombre-product{
-    text-align: left;
+    text-align: center;
 }
 .Contenido-products h5{
     margin-top: 5px;
     color: gray;
     
-    
 }
 .Contenido-products button{
-    border-radius: 50%;
-    
-    background-color: #ffff;
-    padding:20px;
-    
+    border-radius: 100%;
+    padding:15px;
 
 }
 footer{
     margin-top: 250px;
     margin-bottom: 0;
-    text-align: center;
-    background-color: #e5e5e5;  
+    text-align: center; 
     
 }
 .Pie-pagina{
@@ -214,12 +222,12 @@ footer{
     padding: 100px;
     font-size: 15px;
     border-bottom-style: solid;
-    color: #ffff;
+    border-top-style: solid;
     width: 75%;
     
 }
 .Pie-pagina div{
-    color: black;
+    
     margin-left: 100px;
     text-align: left;
 }
@@ -239,13 +247,14 @@ footer{
 }
 .Derechos-reservados{
     text-decoration-color: #e5e5e5;
-    margin-top: 20px;
-    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
 }
 
-body.darkmode{
-    background-color: rgb(32, 32, 44);
-    color: #ddd;
+.oscuro{ 
+    background-color: #1f1f1f; 
+    color: #f1eded; 
 }
 
 @media screen and (max-width: 500px){
@@ -273,17 +282,19 @@ body.darkmode{
         background-color: aqua;
     }
     .Contenido-products{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;  
+        display:flex;
+        flex-direction: nowrap;
+        justify-content: space-evenly;  
         width: 100%;
         background-color: #ff4f6f;
     }
+    
     .Pie-pagina{
         width: 100%;
         display: block;
         margin: 0;
         padding: 0;
+        
     }
 
 }

@@ -17,19 +17,88 @@
             <a href="#">STORE</a>
             <a href="#">Home</a>
             <a href="#">products</a>
-            <img class="icono2" id="botomdark" src="img/moon-half-visible-face-on-light-and-half-on-darkness.png"
-                alt="">
 
+            <button type="button" class="btn-dark" onclick="cambiarModo()">
+                <img class="icono2" src="img/moon-half-visible-face-on-light-and-half-on-darkness.png" alt="">
+            </button>
             <img class="icono3" src="img/shopping-bag.png" alt="">
-            <div class="compras">
-                <h1>Compras</h1>
-                <img class="carrito-compra" src="img/empty-cart.png" alt="">
-                <h3>Your cart is empty
-                    You can add items to your cart by clicking on the "+" button on the product page.</h3>
-            </div>
+            <script type="text/javascript"> 
+                function cambiarModo() { 
+                  var cuerpoweb = document.body; 
+                  cuerpoweb.classList.toggle("oscuro"); 
+                } 
+              </script>
+
+
+            
 
         </nav>
-
+        <div class="compras">
+            <div class="empty">
+            <h1>Compras</h1>
+            <img class="carrito-compraimg" src="img/empty-cart.png" alt="">
+            <h3>Your cart is empty</h3><br>
+            <h5>You can add items to your cart by clicking on the "+" button on the product page.
+            </h5><br> 
+            </div>
+            <div class="producto-carrito">
+                <div class="productos" id="producto1">
+                <img src="img/featured1.png" alt="">
+                <div class="productos-texto">
+                    <h3>stock:9</h3>
+                    <h3>$14.00</h3>
+                    <h2>Subtotal</h2>
+                    <h2>$14.00</h2>
+                    <div class="productos-botones">
+                    <button>-</button>
+                    <h2>0 units</h2>
+                    <button>+</button>
+                    </div>
+                </div>
+                
+                </div>                
+            </div>
+            <div class="producto-carrito">
+                <div class="productos" id="producto2">
+                <img src="img/featured2.png" alt="">
+                <div class="productos-texto">
+                    <h3>stock:9</h3>
+                    <h3>$24.00</h3>
+                    <h2>Subtotal</h2>
+                    <h2>$24.00</h2>
+                    <div class="productos-botones">
+                    <button>-</button>
+                    <h2>0 units</h2>
+                    <button>+</button>
+                    </div>
+                </div>
+                
+                
+                </div>                
+            </div><div class="producto-carrito">
+                <div class="productos" id="producto3">
+                <img src="img/featured3.png" alt="">
+                <div class="productos-texto">
+                    <h3>stock:9</h3>
+                    <h3>$24.00</h3>
+                    <h2>Subtotal</h2>
+                    <h2>$24.00</h2>
+                    <div class="productos-botones">
+                    <button>-</button>
+                    <h2>0 units</h2>
+                    <button>+</button>
+                </div>
+                </div>
+                
+                </div>                
+            </div>
+            
+            <div id="precio-total">
+                <h1 id="contador">0</h1>
+                <h1 class="items">items</h1>
+                <h1 id="valor">0</h1>
+            </div>
+        </div>
         <div class="Imagenportada-home">
             <img src="img/home.png" alt="">
         </div>
@@ -66,43 +135,44 @@
             <div class="Filtros-products">
                 <div>
                     <h3>Show All </h3>
-                    <h3>Show All products</h3>
+                    <h3>Show All products </h3>
                 </div>
                 <div>
                     <h3>Hoodies </h3>
-                    <h3>3 products</h3>
+                    <h3>3 products </h3>
                 </div>
                 <div>
                     <h3>shirts </h3>
-                    <h3>4 products</h3>
+                    <h3>4 products </h3>
                 </div>
                 <div>
-                    <h3>sweatshirt</h3>
-                    <h3>3 products</h3>
+                    <h3>sweatshirt </h3>
+                    <h3>3 products </h3>
                 </div>
 
             </div>
             <div class="Contenido-products">
                 <div>
                     <img src="img/featured1.png" alt="">
-                    <h2 class="Precio">$14.00</h2>
-                    <h5 class="Stock">|Stock: 10</h5>
-                    <h2 class="Nombre-product">Hoodies</h2>
-                    <button>+</button>
+                    <h2 class="Precio" id="precio1">$14</h2>
+                    <h5 class="Stock">|Stock:10</h5>
+                    <h3 class="Nombre-product">Hoodies</h3>
+                    <button id="compra1">+</button>
+
                 </div>
                 <div>
                     <img src="img/featured2.png" alt="">
-                    <h2 class="Precio">$24.00</h2>
-                    <h5 class="Stock">|Stock: 15</h5>
+                    <h2 class="Precio" id="precio2">$24</h2>
+                    <h5 class="Stock">|Stock:15</h5>
                     <h2 class="Nombre-product">Shirts</h2>
-                    <button>+</button>
+                    <button id="compra2">+</button>
                 </div>
                 <div>
                     <img src="img/featured3.png" alt="">
-                    <h2 class="Precio">$24.00</h2>
-                    <h5 class="Stock">|Stock: 10</h5>
+                    <h2 class="Precio" id="precio3">$24</h2>
+                    <h5 class="Stock">|Stock:10</h5>
                     <h2 class="Nombre-product">Sweatshirt</h2>
-                    <button>+</button>
+                    <button id="compra3">+</button>
                 </div>
 
             </div>
@@ -140,29 +210,8 @@
             <h4>rony puche web &copy; 2022</h4>
         </div>
     </footer>
-    <script>
-        const botomdark = document.querySelector('#botomdark')
-        const body = document.querySelector('body')
-
-        load();
-        botomdark = addEventListener("click", e => {
-            body.classList.toggle('darkmode');
-            store(body.classList.contains('darkmode'));
-        });
-        function load() {
-            const darkmode = localStorage.getItem('darkmode');
-            if (!darkmode) {
-                store('false');
-
-            } else if (darkmode == 'true') {
-                body.classList.add('darkmode');
-            }
-        }
-        function store(value) {
-            localStorage.setItem('darkmode', value);
-        }
-    </script>
-
+    
+    <script src="carritoCompras.js"></script>
 </body>
 
 </html>

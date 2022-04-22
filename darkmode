@@ -1,0 +1,10 @@
+
+main()
+function main() {
+    var cuerpoweb = document.getElementsByClassName("btn btn-dark") 
+    cuerpoweb.addEventListener("click",e =>{
+        cuerpoweb.classList.toggle("oscuro"); 
+    })
+    
+}
+
