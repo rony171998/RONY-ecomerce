@@ -14,14 +14,15 @@
     <header>
         <nav>
             <img class="icono1" src="img/favicon.png" alt="">
-            <a href="#">STORE</a>
-            <a href="#">Home</a>
-            <a href="#">products</a>
+            <a >STORE</a>
+            <a href="#Home">Home</a>
+            <a href="#Products">products</a>
 
             <button type="button" class="btn-dark" onclick="cambiarModo()">
                 <img class="icono2" src="img/moon-half-visible-face-on-light-and-half-on-darkness.png" alt="">
             </button>
             <img class="icono3" src="img/shopping-bag.png" alt="">
+            
             <script type="text/javascript"> 
                 function cambiarModo() { 
                   var cuerpoweb = document.body; 
@@ -45,14 +46,14 @@
                 <div class="productos" id="producto1">
                 <img src="img/featured1.png" alt="">
                 <div class="productos-texto">
-                    <h3 class="stock">stock:9</h3>
-                    <h3 class="valor">$14.00</h3>
+                    <h3 class="stock" id="stock1">stock:9</h3>
+                    <h3 class="valor" id="valor1">$14.00</h3>
                     <h2 class="subtotal">Subtotal:</h2>
-                    <h2 class="valorSubtotal">$14.00</h2>
+                    <h2 class="valorSubtotal" id="valorsubtotal1">$0.00</h2>
                     <div class="productos-botones">
-                        <button class="botonMenos">-</button>
-                        <h2 class="unidades">0 units</h2>
-                        <button class="botonMas">+</button>
+                        <button class="botonMenos" id="botonMenos1">-</button>
+                        <h2 class="unidades" id="unidades1">0 units</h2>
+                        <button class="botonMas" id="botonMas1">+</button>
                     </div>
                 </div>
                 
@@ -62,14 +63,14 @@
                 <div class="productos" id="producto2">
                 <img src="img/featured2.png" alt="">
                 <div class="productos-texto">
-                    <h3 class="stock">stock:14 </h3>
-                    <h3 class="valor">$24.00</h3>
+                    <h3 class="stock" id="stock2">stock:14</h3>
+                    <h3 class="valor" id="valor2">$24.00</h3>
                     <h2 class="subtotal">Subtotal:</h2>
-                    <h2 class="valorSubtotal">$24.00</h2>
+                    <h2 class="valorSubtotal" id="valorsubtotal2">$0.00</h2>
                     <div class="productos-botones">
-                        <button class="botonMenos">-</button>
-                        <h2 class="unidades">0 units</h2>
-                        <button class="botonMas">+</button>
+                        <button class="botonMenos" id="botonMenos2">-</button>
+                        <h2 class="unidades" id="unidades2">0 units</h2>
+                        <button class="botonMas" id="botonMas2">+</button>
                     </div>
                 </div>
                 
@@ -79,14 +80,14 @@
                 <div class="productos" id="producto3">
                 <img src="img/featured3.png" alt="">
                 <div class="productos-texto">
-                    <h3 class="stock">stock:4</h3>
-                    <h3 class="valor">$24.00</h3>
+                    <h3 class="stock" id="stock3">stock:4</h3>
+                    <h3 class="valor" id="valor3">$24.00</h3>
                     <h2 class="subtotal">Subtotal:</h2>
-                    <h2 class="valorSubtotal">$24.00</h2>
+                    <h2 class="valorSubtotal" id="valorsubtotal3">$0.00</h2>
                     <div class="productos-botones">
-                        <button class="botonMenos">-</button>
-                        <h2 class="unidades">0 units</h2>
-                        <button class="botonMas">+</button>
+                        <button class="botonMenos"id="botonMenos3">-</button>
+                        <h2 class="unidades" id="unidades3">0 units</h2>
+                        <button class="botonMas" id="botonMas3">+</button>
                 </div>
                 </div>
                 
@@ -99,13 +100,14 @@
                 <h1 id="valor">0</h1>
                 
             </div>
-            <button class="checkout">checkout</button>
+            <button class="checkout" id="checkout">checkout</button>
         </div>
         <div class="Imagenportada-home">
             <img src="img/home.png" alt="">
         </div>
 
     </header>
+    <a name="Home"></a>
     <div class="Container-home">
         <h1 class="Titulo-home">
             New Sweatshirt
@@ -125,14 +127,16 @@
                 Discover
             </button>
 
-            <button class="Add-home">
+            <button class="Add-home" id="Add">
                 ADD TO CART
             </button>
 
         </div>
     </div>
-
+    <a name="Products"></a>
     <main>
+        
+        
         <section class="Products">
             <div class="Filtros-products">
                 <div>
@@ -181,6 +185,7 @@
         </section>
     </main>
     <footer>
+
         <div class="Pie-pagina">
             <div>
                 <h2>Nuestra Informacion</h2>
@@ -208,13 +213,14 @@
                 <img src="img/instagram.png" alt="">
             </div>
         </div>
+        
         <div class="Derechos-reservados">
             <h4>rony puche web &copy; 2022</h4>
         </div>
     </footer>
     
     <script src="carritoCompras.js"></script>
-    <script src="navScroll.js"></script>
+    
 </body>
 
 </html>
