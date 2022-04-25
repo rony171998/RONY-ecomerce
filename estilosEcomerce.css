@@ -323,20 +323,43 @@ footer{
         margin: 0;
         padding: 0;
     }
-    .nav{
-        display: none;
+    nav{
+        background-color: #f1eded;
         margin: 0;
-        padding: 0;
-        
+        padding-left: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        font-size: 80%;
     }
+    .botoncarrito{
+        z-index: 1;
+    }
+    .Imagenportada-home{
+        float: left;
+        width: 100%;
+        
+        margin: 0;
+    }
+    .Imagenportada-home img{
+        width: 100%;
+    }
+    
     .compras{
-        display: none;
+        
+        right: 0;
+        width: 100%;
+        background-color: #f1eded;
+        margin: 0;
     }
     .Container-home{
         margin: 0;
         padding: 0;
         width: 100%;
-        background-color: aqua;
+        display: block;
+        
     }
     .Filtros-products{
         display: flex;
