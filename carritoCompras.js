@@ -22,6 +22,7 @@ function main() {
 
   document.getElementById("Add").addEventListener("click", e => {
     limiteStock(2);
+    mostrarProducto(2)
   });
   document.querySelector(".checkout").addEventListener("click", e => {
     document.getElementById("valor").innerHTML = 0 + ".00"
@@ -55,6 +56,9 @@ function main() {
   })
   document.querySelector("#botoncarrito").addEventListener("click", e => {
     abrirCarrito()
+    quitarProducto(1)
+    quitarProducto(2)
+    quitarProducto(3)
   })
 
 }
@@ -94,9 +98,6 @@ function unidadesMenos(params) {
 
   document.querySelector("#unidades" + params).innerHTML = convertirStringNummeromenos(1, numero) + " units"
 
-  if (parseInt(numero)===1) {
-    quitarProducto(params)
-  }
 }
 
 
@@ -141,6 +142,8 @@ function functionMenos(params) {
     storeMenos(params)
     unidadesMenos(params)
     restarSubtotal(params)
+    ocultarProducto(params)
+    mostarEmpty()
   }
 }
 function abrirCarrito() { 
@@ -148,8 +151,8 @@ function abrirCarrito() {
   carrito.classList.toggle("abrirCarrito"); 
 }
 function quitarProducto(params) { 
-  var carrito = document.querySelector("#producto"+params); 
-  carrito.classList.toggle("quitarProducto"); 
+    var carrito = document.querySelector("#producto"+params); 
+    carrito.classList.toggle("quitarProducto"); 
 }
 function ocultarEmpty() { 
   
@@ -158,11 +161,25 @@ function ocultarEmpty() {
     carrito.classList.toggle("ocultarEmpty"); 
   }
 }
-function mostrarProducto(params) { 
-  var carrito = document.querySelector("#producto"+params); 
-  carrito.classList.toggle("mostrarProducto"); 
-  
+function mostrarProducto(params) {
+  if (document.querySelector("#unidades"+params).innerHTML.substring(0,2)==1) {
+    var carrito = document.querySelector("#producto"+params); 
+    carrito.classList.toggle("mostrarProducto"); 
+  }
 }
+function ocultarProducto(params) {
+  if (document.querySelector("#unidades"+params).innerHTML.substring(0,2)==0) {
+    var carrito = document.querySelector("#producto"+params); 
+    carrito.classList.toggle("mostrarProducto"); 
+  }
+}
+function mostarEmpty(params) {
+  if (document.querySelector("#contador").innerHTML==0) {
+    var carrito = document.querySelector("#empty"); 
+    carrito.classList.toggle("ocultarEmpty"); 
+  }
+}
+
 
 
 
