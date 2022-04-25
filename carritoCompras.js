@@ -8,12 +8,16 @@ main();
 function main() {
   document.getElementById("compra1").addEventListener("click", e => {
     limiteStock(1)
+    mostrarProducto(1)
+    
   });
   document.getElementById("compra2").addEventListener("click", e => {
     limiteStock(2)
+    mostrarProducto(2)
   });
   document.getElementById("compra3").addEventListener("click", e => {
     limiteStock(3)
+    mostrarProducto(3)
   });
 
   document.getElementById("Add").addEventListener("click", e => {
@@ -25,11 +29,13 @@ function main() {
     document.querySelector("#unidades1").innerHTML = 0 + " units"
     document.querySelector("#unidades2").innerHTML = 0 + " units"
     document.querySelector("#unidades3").innerHTML = 0 + " units"
+    ocultarEmpty()
   });
 
 
   document.querySelector("#botonMas1").addEventListener("click", e => {
     limiteStock(1)
+
 
   })
   document.querySelector("#botonMas2").addEventListener("click", e => {
@@ -46,6 +52,9 @@ function main() {
   })
   document.querySelector("#botonMenos3").addEventListener("click", e => {
     functionMenos(3)
+  })
+  document.querySelector("#botoncarrito").addEventListener("click", e => {
+    abrirCarrito()
   })
 
 }
@@ -84,6 +93,10 @@ function unidadesMenos(params) {
   let numero = unidad.substring(0, 2)
 
   document.querySelector("#unidades" + params).innerHTML = convertirStringNummeromenos(1, numero) + " units"
+
+  if (parseInt(numero)===1) {
+    quitarProducto(params)
+  }
 }
 
 
@@ -99,7 +112,9 @@ function convertirStringNummeromenos(numero1, numero2) {
 
 }
 function limiteStock(params) {
+  ocultarEmpty()
   if (document.querySelector("#unidades" + params).innerHTML.substring(0, 2) < parseInt(document.querySelector("#stock" + params).innerHTML.substring(6, 8))) {
+    
     store(params)
     unidades(params)
     sumarSubtotal(params)
@@ -128,5 +143,27 @@ function functionMenos(params) {
     restarSubtotal(params)
   }
 }
-//document.readyState()
+function abrirCarrito() { 
+  var carrito = document.querySelector("#compras"); 
+  carrito.classList.toggle("abrirCarrito"); 
+}
+function quitarProducto(params) { 
+  var carrito = document.querySelector("#producto"+params); 
+  carrito.classList.toggle("quitarProducto"); 
+}
+function ocultarEmpty() { 
+  
+  if (document.querySelector("#contador").innerHTML==0) {
+    var carrito = document.querySelector("#empty"); 
+    carrito.classList.toggle("ocultarEmpty"); 
+  }
+}
+function mostrarProducto(params) { 
+  var carrito = document.querySelector("#producto"+params); 
+  carrito.classList.toggle("mostrarProducto"); 
+  
+}
+
+
+
 

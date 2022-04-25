@@ -1,4 +1,0 @@
-
-main(){
-    element=document.
-}

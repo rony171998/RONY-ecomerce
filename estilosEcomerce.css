@@ -59,6 +59,7 @@ nav > a:hover{
     width: 32px;
 }
 .compras{
+    visibility: hidden;
     display: block;
     position: fixed;
     margin-top: 100px;
@@ -67,9 +68,7 @@ nav > a:hover{
     text-align: center;
     right: 10px;
 }
-.empty{
-    display: none;
-}
+
 .carrito-compraimg{
     display: block;
     
@@ -77,10 +76,11 @@ nav > a:hover{
 .producto-carrito{
     display: flex;
     flex-wrap: wrap;
-    font-size: 12px;
-    
+    font-size: 12px;  
 }
+
 .productos{
+
    display: flex;
    justify-content: center;
    justify-content: space-evenly;
@@ -294,10 +294,28 @@ footer{
     margin-bottom: 30px;
     
 }
-
+#producto1{
+    display: flex;
+}#producto2{
+    display: flex;
+}#producto3{
+    display: flex;
+}
 .oscuro{ 
     background-color: #1f1f1f; 
     color: #f1eded; 
+}
+.abrirCarrito{
+    visibility: visible;
+}
+.quitarProducto{
+    visibility: hidden;
+}
+.ocultarEmpty{
+    display: none;
+}
+.mostrarProducto{
+    visibility: visible;
 }
 /*----------------------- movil------------------------ */
 @media screen and (max-width: 500px){
